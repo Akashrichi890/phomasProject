@@ -100,10 +100,19 @@ public class CommonMethods {
 		return dropDownElement;
 	}
 	
+	public static WebElement selectAllCheckbox(WebDriver driver) {
+		WebElement dropDownElement = driver.findElement(By.xpath("//span[contains(text(),'Select all')]"));
+		return dropDownElement;
+	}
+	
 	public static WebElement dropdownTextBox(WebDriver driver) {
 		WebElement dropdownTextBox = driver.findElement(By.xpath("//input[contains(@placeholder,'Search for')]"));
 		return dropdownTextBox;
 	}
 	
+	public static WebElement checkboxSelectedValue(WebDriver driver) {
+		WebElement checkboxSelectedValue = driver.findElement(By.xpath("//mat-pseudo-checkbox[contains(@class,'checked')]"));
+		return checkboxSelectedValue;
+	}
 
 }
